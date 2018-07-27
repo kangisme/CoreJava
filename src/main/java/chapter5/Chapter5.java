@@ -1,7 +1,7 @@
 package chapter5;
 
-import org.omg.CORBA.IntHolder;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 public class Chapter5 {
@@ -67,11 +67,25 @@ public class Chapter5 {
         System.out.println(Double[].class.getName());
     }
 
+    private static void getField() {
+        Employee harry = new Employee("Harry Hacker", 35000, 1989, 1, 1);
+        Class cl = harry.getClass();
+        try {
+            Field f = cl.getDeclaredField("name");
+            f.setAccessible(true);
+            Object v = f.get(harry);
+            System.out.println(v);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         ManagerToEmployee();
         arrayList();
         autoBoxing();
         getClassName();
+        getField();
     }
 
     /**
