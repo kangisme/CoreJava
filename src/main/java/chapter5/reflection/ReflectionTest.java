@@ -32,7 +32,7 @@ public class ReflectionTest {
     }
 
     private static void getPrivate() throws Exception{
-        Class clazz = Class.forName("reflection.Book");
+        Class clazz = Class.forName("chapter5.reflection.Book");
         Constructor c = clazz.getDeclaredConstructor(null);
         c.setAccessible(true);
         c.newInstance(null);
@@ -40,7 +40,7 @@ public class ReflectionTest {
 
     private static void refGetClass() throws ClassNotFoundException {
         // 加载类的3种方法
-        Class clazz = Class.forName("reflection.Person");
+        Class clazz = Class.forName("chapter5.reflection.Person");
         Class clazz1 = new Person().getClass();
         Class class2 = Person.class;
         // 三种方法获取的class实例是一个，可以认为同一个类在jvm中的class实例只有一个
@@ -49,7 +49,7 @@ public class ReflectionTest {
 
     private static void refGetPublicConstructor() throws Exception {
 
-        Class clazz = Class.forName("reflection.Person");
+        Class clazz = Class.forName("chapter5.reflection.Person");
         Constructor c = clazz.getConstructor(null);
 
         Person p = (Person) c.newInstance(null);
@@ -58,7 +58,7 @@ public class ReflectionTest {
 
     private static void refGetPrivateConstructor() throws Exception {
 
-        Class clazz = Class.forName("reflection.Person");
+        Class clazz = Class.forName("chapter5.reflection.Person");
         Constructor c = clazz
                 .getDeclaredConstructor(new Class[]{String.class});
 
@@ -72,7 +72,7 @@ public class ReflectionTest {
 
     private static void refGetMethodWithNoArg() throws Exception {
 
-        Class clazz = Class.forName("reflection.Person");
+        Class clazz = Class.forName("chapter5.reflection.Person");
         Constructor c = clazz.getConstructor(null);
         Person p = (Person) c.newInstance(null);
 
@@ -83,7 +83,7 @@ public class ReflectionTest {
 
     private static void refGetMethodWithArg() throws Exception {
 
-        Class clazz = Class.forName("reflection.Person");
+        Class clazz = Class.forName("chapter5.reflection.Person");
         Constructor c = clazz.getConstructor(null);
         Person p = (Person) c.newInstance(null);
 
@@ -94,7 +94,7 @@ public class ReflectionTest {
 
     private static void refGetField() throws Exception {
 
-        Class clazz = Class.forName("reflection.Person");
+        Class clazz = Class.forName("chapter5.reflection.Person");
         Constructor c = clazz.getDeclaredConstructor(String.class);
         // 由于构造函数是 private 的，所以需要获取控制权限
         c.setAccessible(true);
