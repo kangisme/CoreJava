@@ -13,19 +13,19 @@ public class ReflectionTest {
      */
     public static void main(String[] args) throws Exception {
 
-        refGetClass();
-
-        // 获取并调用无参构造函数
-        refGetPublicConstructor();
-
-        // 获取并调用私有的含参构造函数
-        refGetPrivateConstructor();
-
-        // 获取并调用无参方法 fun
-        refGetMethodWithNoArg();
-
-        // 获取并调用有参数方法 fun
-        refGetMethodWithArg();
+//        refGetClass();
+//
+//        // 获取并调用无参构造函数
+//        refGetPublicConstructor();
+//
+//        // 获取并调用私有的含参构造函数
+//        refGetPrivateConstructor();
+//
+//        // 获取并调用无参方法 fun
+//        refGetMethodWithNoArg();
+//
+//        // 获取并调用有参数方法 fun
+//        refGetMethodWithArg();
 
         // 获取类的字段
         refGetField();
