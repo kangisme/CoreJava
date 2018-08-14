@@ -1,5 +1,7 @@
 package chap6;
 
+import chap6.annotation.TestAnnotation;
+
 import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
@@ -9,6 +11,15 @@ public class Chap6 {
 
     public static void main(String[] args) {
         getTime();
+        getAnnotation();
+    }
+
+    private static void getAnnotation() {
+        TestAnnotation testAnnotation = Chap6.class.getAnnotation(TestAnnotation.class);
+        if (testAnnotation != null) {
+            System.out.println("id:" + testAnnotation.id());
+            System.out.println("msg:" + testAnnotation.msg());
+        }
     }
 
     private static void getTime() {
